@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Adham</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #8989b1, #4e4444);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Floating particles */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveBg 20s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px, -200px); }
+}
+
+.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Name styling */
+.name {
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    background: linear-gradient(45deg, #403694, #f9d423, #24c6dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #02152b; }
+    to { text-shadow: 0 0 30px #24c6dc; }
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Button */
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #7316df, #f9d423);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Surprise text */
+#surprise {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #f9d423;
+}
+
+/* Balloons */
+.balloons {
+    font-size: 50px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="balloons">🎈🎈🎈</div>
+
+    <h1 class="name">Adham</h1>
+
+    <h2>Happy Birthday Adham🎂</h2>
+
+    <p class="message">
+        Wishing you a day filled with happiness<br>
+        and a year filled with success and joy ✨
+    </p>
+
+    <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+
+    <div id="surprise"></div>
+</div>
+
+<script>
+function showSurprise() {
+    document.getElementById("surprise").innerHTML =
+     " Adham, you are amazing and deserve the best! Happy moments are sweeter because you’re in my life🌟🎉<br><br>" +
+    "May all your dreams come true and your smile never fades 😄<br><br>"+"From your Wife ✨Maryam ✨";
+}
+</script>
+
+</body>
+</html>
